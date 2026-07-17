@@ -41,10 +41,7 @@ Requires Java 25 (the project targets release = 25).
 The runnable mod jar is produced at build/libs/tnt-optimiser-1.0.0.jar.
 
 ## Installing
-
-Drop build/libs/tnt-optimiser-1.0.0.jar into the mods/ folder of a 26.1.2 Fabric server (or a client
-used for singleplayer - the mod loads on both and only affects server-side explosion resolution). No
-configuration is required.
+Check for the jar file in the releases and drop it into your mods folder.
 
 ## Mapping note
 
