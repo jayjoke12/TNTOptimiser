@@ -13,7 +13,6 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.List;
@@ -53,7 +52,7 @@ public abstract class ExplosionMixin {
 	public abstract float radius();
 
 	@Inject(method = "explode", at = @At("HEAD"))
-	private void optimisedRegisterExplosion(CallbackInfo callback) {
+	private void optimisedRegisterExplosion(CallbackInfoReturnable<Integer> callback) {
 		Identifier dimension = this.level().dimension().identifier();
 		this.optimisedActive = !OptimisedExplosionLogic.beginExplosion(dimension, this.center(), this.radius());
 	}
