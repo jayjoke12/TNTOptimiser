@@ -3,7 +3,9 @@
 	"package": "com.jayjoke.tntoptimised.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"mixins": [
-		"ExampleMixin"
+		"ExplosionMixin",
+		"ExplosionDamageCalculatorMixin",
+		"ServerWorldTickMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

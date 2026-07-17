@@ -3,13 +3,13 @@
 	"id": "tnt-optimiser",
 	"version": "${version}",
 	"name": "TNT Optimiser",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Reduces server-side CPU cost of large TNT chain reactions. Vanilla's per-explosion ray-cast scan is replaced by a breadth-first traversal that visits each block in the blast sphere once and de-duplicates work across overlapping explosions in the same tick. Explosion radius, entity damage and knockback are unchanged; the exact set of destroyed blocks may differ slightly from vanilla's ray-cast crater by design.",
 	"authors": [
-		"Me!"
+		"jayjoke"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://jayjoke12.github.io/",
+		"sources": "https://github.com/jayjoke12/TNTOptimiser"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/tnt-optimiser/icon.png",
@@ -17,17 +17,10 @@
 	"entrypoints": {
 		"main": [
 			"com.jayjoke.tntoptimised.TNTOptimiser"
-		],
-		"client": [
-			"com.jayjoke.tntoptimised.client.TNTOptimiserClient"
 		]
 	},
 	"mixins": [
-		"tnt-optimiser.mixins.json",
-		{
-			"config": "tnt-optimiser.client.mixins.json",
-			"environment": "client"
-		}
+		"tnt-optimiser.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.19.3",
